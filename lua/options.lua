@@ -3,11 +3,26 @@
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
--- Make line numbers default
+-- Set line numbers to relative
+vim.opt.relativenumber = true
 vim.opt.number = true
--- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
+
+-- Automatically switch to absolute line numbers in insert mode
+vim.api.nvim_create_augroup('InsertModeNumbering', { clear = true })
+vim.api.nvim_create_autocmd('InsertEnter', {
+  group = 'InsertModeNumbering',
+  pattern = '*',
+  callback = function()
+    vim.opt.relativenumber = false
+  end,
+})
+vim.api.nvim_create_autocmd('InsertLeave', {
+  group = 'InsertModeNumbering',
+  pattern = '*',
+  callback = function()
+    vim.opt.relativenumber = true
+  end,
+})
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -63,3 +78,14 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- vim: ts=2 sts=2 sw=2 et
+
+-- zodasync mods
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.wrap = false
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.termguicolors = true

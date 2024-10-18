@@ -46,3 +46,47 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- vim: ts=2 sts=2 sw=2 et
+
+-- zodasync mods
+vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+vim.api.nvim_set_keymap('n', '<C-y>', '<C-y>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
+-- greatest remap ever
+vim.keymap.set('x', '<leader>p', [["_dP]])
+
+-- next greatest remap ever : asbjornHaland
+vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]])
+vim.keymap.set('n', '<leader>Y', [["+Y]])
+
+vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]])
+
+-- This is going to get me cancelled
+vim.keymap.set('i', '<C-c>', '<Esc>')
+
+vim.keymap.set('n', 'Q', '<nop>')
+vim.keymap.set('n', '<C-k>', '<cmd>cnext<CR>zz')
+vim.keymap.set('n', '<C-j>', '<cmd>cprev<CR>zz')
+vim.keymap.set('n', '<leader>k', '<cmd>lnext<CR>zz')
+vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz')
+
+vim.keymap.set('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Select all
+vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
+
+-- KEYMAPS
+local opts = { noremap = true, silent = true }
+
+-- new tab
+vim.keymap.set('n', 'te', ':tabedit<Return>', opts)
+vim.keymap.set('n', '<tab>', ':tabnext<Return>', opts)
+vim.keymap.set('n', '<s-tab>', ':tabprev<Return>', opts)
+
+-- split window
+vim.keymap.set('n', 'ss', ':split<Return>', opts)
+vim.keymap.set('n', 'sv', ':vsplit<Return>', opts)
