@@ -5,12 +5,12 @@
 return {
   {
     'catppuccin/nvim',
+    lazy = false,
     name = 'catppuccin',
     priority = 1000, -- Make sure to load this before all the other start plugins.
-    init = function()
+    config = function()
       -- Load the colorscheme here.
-      require('catppuccin').setup()
-      vim.cmd.colorscheme 'catppuccin'
+      vim.cmd.colorscheme 'catppuccin-frappe'
     end,
   },
 }

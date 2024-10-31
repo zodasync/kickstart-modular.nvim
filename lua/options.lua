@@ -3,7 +3,7 @@
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
-vim.opt.background = 'dark'
+vim.opt.background = 'light'
 
 -- Set line numbers to relative
 vim.opt.relativenumber = true
