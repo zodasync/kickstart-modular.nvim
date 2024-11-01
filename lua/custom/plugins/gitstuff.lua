@@ -11,14 +11,19 @@ return {
       'echasnovski/mini.pick', -- optional
     },
     config = true,
+    vim.keymap.set('n', '<leader>gs', ':Neogit<CR>', { silent = true, noremap = true }),
+    vim.keymap.set('n', '<leader>gc', ':Neogit commit<CR>', { silent = true, noremap = true }),
+    vim.keymap.set('n', '<leader>gp', ':Neogit pull<CR>', { silent = true, noremap = true }),
+    vim.keymap.set('n', '<leader>gP', ':Neogit push<CR>', { silent = true, noremap = true }),
+    vim.keymap.set('n', '<leader>gB', ':Telescope git_branches<CR>', { silent = true, noremap = true }),
   },
   {
     'lewis6991/gitsigns.nvim',
     config = function()
       require('gitsigns').setup()
 
-      vim.keymap.set('n', '<leader>gp', ':Gitsigns preview_hunk<CR>', {})
-      vim.keymap.set('n', '<leader>gt', ':Gitsigns toggle_current_line_blame<CR>', {})
+      vim.keymap.set('n', '<leader>gh', ':Gitsigns preview_hunk<CR>', {})
+      vim.keymap.set('n', '<leader>gb', ':Gitsigns toggle_current_line_blame<CR>', {})
     end,
   },
 }
