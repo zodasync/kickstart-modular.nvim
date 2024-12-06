@@ -77,7 +77,7 @@ vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz')
 vim.keymap.set('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Select all
-vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
+vim.keymap.set('n', '<C-a>', 'gg0<S-v>G$')
 
 -- KEYMAPS
 local opts = { noremap = true, silent = true }
