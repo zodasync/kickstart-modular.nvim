@@ -89,3 +89,4 @@ vim.opt.wrap = false
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.opt.termguicolors = true
+vim.bo.textwidth = 120
