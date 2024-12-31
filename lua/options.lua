@@ -59,7 +59,7 @@ vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 
 -- spelling
-vim.opt.spelllang = { 'en_us' }
+vim.opt.spell.spelllang = { 'en_us' }
 
 -- Configure how new splits should be opened
 vim.opt.splitright = true
