@@ -85,3 +85,6 @@ vim.keymap.set('n', '<s-tab>', ':tabprev<Return>', opts)
 -- split window
 vim.keymap.set('n', 'ss', ':split<Return>', opts)
 vim.keymap.set('n', 'sv', ':vsplit<Return>', opts)
+
+--noice messages
+vim.keymap.set('n', '<leader>nd', '<cmd>NoiceDismiss<CR>', { desc = 'Dismiss Noice Message' })
