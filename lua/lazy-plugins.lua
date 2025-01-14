@@ -38,7 +38,8 @@ require('lazy').setup({
   --using catppuccin instead in custom
   --require 'kickstart/plugins/tokyonight',
 
-  require 'kickstart/plugins/todo-comments',
+  --require 'kickstart/plugins/todo-comments',
+  --doing my own todo config
 
   require 'kickstart/plugins/mini',
 
