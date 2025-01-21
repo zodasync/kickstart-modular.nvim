@@ -17,7 +17,7 @@ return {
     -- OPTIONAL:
     --   `nvim-notify` is only needed, if you want to use the notification view.
     --   If not available, we use `mini` as the fallback
-    'rcarriga/nvim-notify',
+    --'rcarriga/nvim-notify',
   },
 
   config = function()
@@ -38,12 +38,6 @@ return {
         inc_rename = false, -- enables an input dialog for inc-rename.nvim
         lsp_doc_border = true, -- add a border to hover docs and signature help
       },
-    }
-  end,
-
-  notifyConfig = function()
-    require('notify').setup {
-      background_colour = '#000000',
     }
   end,
 }
